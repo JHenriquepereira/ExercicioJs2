@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let livros = [
+            {
+                nome: "Livro",
+                autor: "João da Silva",
+                ano: 2001,
+                emprestado: true,
+                categorias: ["Fantasia", "Ficção"],
+                revisoes: [
+                    {
+                        leitor: "José Carlos",
+                        comentario: "Livro muito bom, ótima estilização, blablablá",
+                        avaliacao: 4
+                    },
+                    {
+                        leitor: "José ",
+                        comentario: "Livro muito ruim, péssima história, nada original",
+                        avaliacao: 1
+                    }
+
+                ]
+
+            },
+        ]
+        var livroEmprestado = "Não";
+        if (livros[0].emprestado) {
+            livroEmprestado = "Sim"
+        }
+
+        console.log(`Titulo:${livros[0].nome} 
+Autor:${livros[0].autor} 
+Ano de lançamento:${livros[0].ano}
+Livro Disponível:${livroEmprestado} 
+Categoria:${livros[0].categorias[0]}
+Comentário:${livros[0].revisoes[1].comentario}
+Avaliação:${livros[0].revisoes[1].avaliacao}`)
+    </script>
+</body>
+
+</html>
